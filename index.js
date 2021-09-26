@@ -32,7 +32,7 @@ const createComp = async() => {
         text:"Твои уста сладкие и манящие, словно мед. А я «мохнатый пчол»."
     })
 }
-createComp()
+
 
 mongoose.connect(`
 mongodb+srv://voose:admin@cluster0.xhj1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).then(tea => console.log('успешно')).catch(e => console.log(e))
@@ -62,6 +62,7 @@ const start = () => {
             await bot.sendMessage(chatId, 'Привет, Маришка❤️‍🔥 ');
             await bot.sendMessage(chatId, `${Posts.text}`)
             await bot.sendSticker(chatId, "https://tlgrm.ru/_/stickers/b48/7e2/b487e222-21cd-4741-b567-74b25f44b21a/8.webp")
+            await bot.sendMessage(904952417, `Отправлено`)
         }
         
         
