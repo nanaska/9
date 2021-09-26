@@ -1,10 +1,10 @@
 const TelegramApi = require('node-telegram-bot-api')
 
-const TOKEN = "2012706332:AAHu8f_ETWqr2vm3N0pgiE8fmQLhMpIQLtk"
-// const modelComl = require('./models/comliment.model')
 
-// const mongoose = require('mongoose')
-// const { db } = require('./models/comliment.model')
+const modelComl = require('./models/comliment.model')
+
+const mongoose = require('mongoose')
+const { db } = require('./models/comliment.model')
 
 const bot = new TelegramApi(TOKEN, {polling: true})
 
@@ -34,8 +34,8 @@ const createComp = async() => {
 }
 
 
-// mongoose.connect(`
-// mongodb+srv://voose:admin@cluster0.xhj1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).then(tea => console.log('успешно')).catch(e => console.log(e))
+mongoose.connect(process.env.URL
+).then(tea => console.log('успешно')).catch(e => console.log(e))
 
 
 
@@ -57,12 +57,12 @@ const start = () => {
         const chatId = msg.chat.id;
         
         if(text ==="/start"){
-            // const Posts = await modelComl.findOne({id: getRandomInt()})
+            const Posts = await modelComl.findOne({id: getRandomInt()})
             
             await bot.sendMessage(chatId, 'Привет, Маришка❤️‍🔥 ');
-            await bot.sendMessage(chatId, `test`)
+            await bot.sendMessage(chatId, `${Posts.text}`)
             await bot.sendSticker(chatId, "https://tlgrm.ru/_/stickers/b48/7e2/b487e222-21cd-4741-b567-74b25f44b21a/8.webp")
-            await bot.sendMessage(904952417, `Отправлено`)
+            await bot.sendMessage(605598157, `${chatId}, кто то посмотрел`)
         }
         
         
