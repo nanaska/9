@@ -1,6 +1,6 @@
 const TelegramApi = require('node-telegram-bot-api')
 
-const TOKEN = env.TOKEN
+const TOKEN = process.env.TOKEN
 const modelComl = require('./models/comliment.model')
 
 const mongoose = require('mongoose')
