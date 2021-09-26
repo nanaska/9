@@ -1,0 +1,1 @@
+worker = 2012706332:AAHu8f_ETWqr2vm3N0pgiE8fmQLhMpIQLtk
