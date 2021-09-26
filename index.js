@@ -1,12 +1,12 @@
 const TelegramApi = require('node-telegram-bot-api')
 
-const token = "2012706332:AAHu8f_ETWqr2vm3N0pgiE8fmQLhMpIQLtk"
+const TOKEN = env.TOKEN
 const modelComl = require('./models/comliment.model')
 
 const mongoose = require('mongoose')
 const { db } = require('./models/comliment.model')
 
-const bot = new TelegramApi(token, {polling: true})
+const bot = new TelegramApi(TOKEN, {polling: true})
 
 const createComp = async() => {
     await  modelComl.create({
