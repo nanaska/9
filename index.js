@@ -1,6 +1,6 @@
 const TelegramApi = require('node-telegram-bot-api')
 
-
+const TOKEN = "2012706332:AAHu8f_ETWqr2vm3N0pgiE8fmQLhMpIQLtk"
 const modelComl = require('./models/comliment.model')
 
 const mongoose = require('mongoose')
@@ -34,8 +34,8 @@ const createComp = async() => {
 }
 
 
-mongoose.connect(process.env.URL
-).then(tea => console.log('успешно')).catch(e => console.log(e))
+mongoose.connect(`
+mongodb+srv://voose:admin@cluster0.xhj1e.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`).then(tea => console.log('успешно')).catch(e => console.log(e))
 
 
 
