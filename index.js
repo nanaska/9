@@ -87,14 +87,14 @@ const start = () => {
 
         if(text ==="/start"){
             
-            const Posts = await modelComl.findOne({id: getRandomInt()})
+            const Posts =  modelComl.findOne({id: getRandomInt()})
             
             
-            await bot.sendMessage(chatId, 'Привет, Маришка❤️‍🔥 ');
-            await bot.sendMessage(chatId, `${Posts.text}`)
-            await bot.sendPhoto(chatId, `${Posts.sticker}`)
+             bot.sendMessage(chatId, 'Привет, Маришка❤️‍🔥 ');
+             bot.sendMessage(chatId, `${Posts.text}`)
+             bot.sendPhoto(chatId, `${Posts.sticker}`)
             
-            await bot.sendMessage(605598157, `${chatId}, кто то посмотрел`)
+             bot.sendMessage(605598157, `${chatId}, кто то посмотрел`)
         }
         if(text === "/sendmarina"){
             bot.sendMessage(MARINA, `Я тебя люблю❤️‍🔥` )
